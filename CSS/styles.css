@@ -1,0 +1,633 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right, #ffffff, #eeeeee, #dddddd, #cccccc, #bbbbbb);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------Contenedor------------------------ */
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* ------------------------header------------------------ */
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(105, 253, 142, 0.486) 0%, hsla(196, 95%, 60%, 0.514) 100%), url(../assets/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.head {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hamburguer {
+    position: fixed;
+    z-index: 999;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: thin white solid;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+}
+
+.hamburguer:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.menu-navegacion {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
+    background-image: linear-gradient(to top, rgba(105, 253, 142) 0%, hsla(196, 95%, 60%) 100%);
+}
+
+.spread {
+    transform: translateX(0);
+}
+
+.menu-navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-navegacion a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.eslogan {
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/* ------------------------Nuestra Empresa------------------------ */
+
+.nosotros {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "nosotros-img texto-empresa"
+        "nosotros-img texto-mision"
+        "nosotros-img texto-vision";
+}
+
+.nosotros-img {
+    grid-area: nosotros-img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.texto-empresa {
+    grid-area: texto-empresa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.texto-mision {
+    grid-area: texto-mision;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.texto-vision {
+    grid-area: texto-vision;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.nosotros-titulo h2 {
+    padding: 5px;
+    text-align: center;
+}
+
+.nosotros-parrafo {
+    text-align: justify;
+}
+
+/* ------------------------Productos------------------------ */
+
+.seccion-productos {
+    background-image: linear-gradient(to top, rgba(105, 253, 142) 0%, hsla(196, 95%, 60%) 100%);
+}
+
+.productos-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "producto-1 producto-2 producto-3";
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    white-space: nowrap;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.producto-1 {
+    grid-area: producto-1;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+}
+
+.producto-2 {
+    grid-area: producto-2;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+}
+
+.producto-3 {
+    grid-area: producto-3;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+}
+
+.prodcuto p {
+    margin: 0;
+    text-align: justify;
+}
+
+.prodcuto h2 {
+    margin: 0;
+}
+
+.producto__img {
+    width: 160%;
+    margin-left: -30%;
+    margin-right: -30%;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    max-width: none;
+}
+
+.producto__titulo {
+    font-size: 30px;
+    color: black;
+    margin: 0 0 0.5em 0;
+    line-height: 1.1;
+}
+
+.producto__btn {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    background-color: aqua;
+    box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 7px 9px 17px -4px rgba(0, 0, 0, 0.85);
+}
+
+.producto__btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ------------------------ Ubicacion------------------------ */
+
+.ubicacion-contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7% 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "texto-ubicacion"
+        "mapa";
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacion h2 {
+    padding: 20px;
+}
+
+.texto-ubicacion {
+    grid-area: texto-ubicacion;
+    margin: 10px;
+}
+
+.texto-ubicacion img {
+
+    width: 200px;
+    height: 200px;
+}
+
+.texto-ubicacion p {
+    padding: 20px;
+    text-align: left;
+}
+
+.texto-mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-mapa p {
+    text-align: justify;
+}
+
+.mapa {
+    grid-area: mapa;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* ------------------------contactenos------------------------ */
+
+
+footer {
+    background-image: linear-gradient(to top, rgba(105, 253, 142) 0%, hsla(196, 95%, 60%) 100%);
+    padding-bottom: 0.1px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us {
+    width: 40%;
+    color: #fff;
+}
+
+.brand {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.social-media-icon:hover {
+    background: rgb(42, 195, 250) 100%;
+}
+
+.facebook img {
+    width: 48px;
+    height: 48px;
+}
+
+.instagram img {
+    width: 48px;
+    height: 48px;
+}
+
+.whatsapp img {
+    width: 48px;
+    height: 48px;
+}
+
+.mail img {
+    width: 48px;
+    height: 48px;
+}
+
+.line p {
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.line {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+.line a {
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ------------------------Media Queries------------------------ */
+
+
+@media screen and (max-width: 1024px) {
+    .menu-navegacion {
+        width: 50vw;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    /* -------------------Nuestra empresa----------------  */
+
+    .nosotros-contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas:
+            "nosotros-img texto-empresa"
+            "texto-mision texto-vision";
+    }
+
+    .nosotros-img {
+        grid-area: nosotros-img;
+    }
+
+    .texto-empresa {
+        grid-area: texto-empresa;
+    }
+
+    .texto-mision {
+        grid-area: texto-mision;
+    }
+
+    .texto-vision {
+        grid-area: texto-vision;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    /* Productos  */
+
+    .productos-contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas:
+            "producto-1 producto-2"
+            "producto-3 .";
+    }
+
+    .producto-1 {
+        grid-area: producto-1;
+    }
+
+    .producto-2 {
+        grid-area: producto-2;
+    }
+
+    .producto-3 {
+        grid-area: producto-3;
+    }
+
+    /* Ubicacion  */
+
+    .texto-ubicacion img {
+        display: none;
+    }
+
+    /* Contactenos */
+
+    .cont-expert {
+        width: 80%;
+    }
+
+    .footer-content {
+        justify-content: center;
+    }
+
+    .social-media {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon {
+        margin-left: 0;
+    }
+
+    .contact-us {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 460px) {
+    .menu-navegacion {
+        width: 65vw;
+    }
+
+    .hamburguer {
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 30px;
+    }
+
+    /* Nuestra empresa  */
+
+    .nosotros-contenido {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas:
+            "texto-empresa"
+            "nosotros-img"
+            "texto-mision"
+            "texto-vision";
+    }
+
+    .nosotros-img {
+        grid-area: nosotros-img;
+    }
+
+    .texto-empresa {
+        grid-area: texto-empresa;
+    }
+
+    .texto-mision {
+        grid-area: texto-mision;
+    }
+
+    .texto-vision {
+        grid-area: texto-vision;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    /* Productos */
+
+    .productos-contenido {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas:
+            "producto-1"
+            "producto-2"
+            "producto-3";
+    }
+
+    .producto-1 {
+        grid-area: producto-1;
+    }
+
+    .producto-2 {
+        grid-area: producto-2;
+    }
+
+    .producto-3 {
+        grid-area: producto-3;
+    }
+
+    /* Mapa Ubicacion */
+
+
+    /* Contactenos */
+
+    .social-media {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon {
+        margin-left: 0;
+    }
+
+    .contact-us {
+        text-align: center;
+        width: 95%;
+        margin-bottom: 40px;
+    }
+
+}
